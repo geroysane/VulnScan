@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/paolo/Documents/SwDev/VulnScan/**)",
+      "Bash(if [ ! -d \"C:\\Users\\paolo\\Documents\\SwDev\\Vulnscan\\docs\\fasi\" ])",
+      "Bash(then mkdir -p \"C:\\Users\\paolo\\Documents\\SwDev\\Vulnscan\\docs\\fasi\")",
+      "Bash(fi)",
+      "Bash(cmd /c:*)",
+      "Bash(qmake:*)",
+      "Bash(\"C:\\Qt\\6.9.1\\mingw_64\\bin\\qmake.exe\" vulnscan.pro)",
+      "Bash(where gcc g++)",
+      "Bash(set PATH=C:Qt6.9.1mingw_64bin)",
+      "Bash(%PATH%)",
+      "Read(//c/Qt/6.9.1/mingw_64/bin/**)",
+      "Read(//c/Qt/Tools/**)",
+      "Bash(export PATH=\"/c/Qt/6.9.1/mingw_64/bin:/c/Qt/Tools/mingw1310_64/bin:$PATH\")",
+      "Bash(g++:*)",
+      "Read(//c/Qt//**)",
+      "Bash(where:*)",
+      "Bash(cat:*)",
+      "Bash(export PATH=\"/c/Qt/Tools/mingw1310_64/bin:/c/Qt/6.9.1/mingw_64/bin:$PATH\")",
+      "Bash(mingw32-make:*)",
+      "Bash(export:*)",
+      "Bash(cmake:*)",
+      "Bash(./vulnscan_tests.exe)",
+      "Bash(./build/tests/vulnscan_tests.exe)",
+      "Bash(./build/tests/vulnscan_tests.exe:*)",
+      "Bash(ctest:*)",
+      "Bash(ldd:*)",
+      "Bash(windeployqt:*)",
+      "Bash(./vulnscan_tests.exe:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,70 @@
+# Build directories
+build/
+build-*/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Qt generated files
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qm
+.qmake.stash
+*.pro.user
+*.pro.user.*
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Database files (runtime)
+*.db
+*.sqlite
+*.sqlite3
+!schema.sql
+
+# Logs
+*.log
+logs/
+
+# Configuration files (with sensitive data)
+config/*.json
+!config/default.json
+!config/example.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Compiled binaries
+vulnscan_gui
+vulnscan_cli
+vulnscan_tests
+
+# Doxygen output
+docs/html/
+docs/latex/
+
+# Dependencies
+vcpkg_installed/
+.vcpkg/
