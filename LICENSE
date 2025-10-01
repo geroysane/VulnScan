@@ -1,0 +1,83 @@
+MIT License
+
+Copyright (c) 2025 Paolo Sereno
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+LEGAL DISCLAIMER AND TERMS OF USE
+
+This software (VulnScan) is a DEFENSIVE SECURITY TOOL intended exclusively 
+for legal and authorized security testing, vulnerability assessment, and 
+educational purposes.
+
+USER RESPONSIBILITIES:
+
+1. AUTHORIZATION REQUIREMENT
+   Users MUST obtain explicit written authorization before scanning any 
+   network, system, or infrastructure that they do not own or have explicit 
+   permission to test.
+
+2. LEGAL COMPLIANCE
+   Users are solely responsible for ensuring their use of this software 
+   complies with all applicable local, state, federal, and international 
+   laws and regulations, including but not limited to:
+   - Computer Fraud and Abuse Act (CFAA) in the United States
+   - Computer Misuse Act in the United Kingdom
+   - EU Cybersecurity regulations
+   - Any other applicable cybersecurity and privacy laws
+
+3. PROHIBITED USES
+   This software SHALL NOT be used for:
+   - Unauthorized access to computer systems or networks
+   - Any form of malicious hacking or cyber attacks
+   - Data theft or exfiltration
+   - Denial of Service (DoS) attacks
+   - Any illegal or unauthorized activities
+
+4. NO WARRANTY FOR ILLEGAL USE
+   The MIT License's "AS IS" warranty disclaimer explicitly applies to any
+   illegal or unauthorized use of this software.
+
+DEVELOPER LIABILITY:
+
+The developers and contributors of VulnScan:
+- Assume NO liability for misuse of this software
+- Are NOT responsible for any damages, legal consequences, or penalties 
+  resulting from unauthorized or illegal use
+- Provide this tool for LEGITIMATE SECURITY RESEARCH AND TESTING ONLY
+- Strongly condemn any malicious or unauthorized use of this software
+
+ACKNOWLEDGMENT:
+
+By downloading, installing, or using VulnScan, you acknowledge that you have 
+read this disclaimer, understand your legal obligations, and agree to use 
+this software only for legal and authorized purposes.
+
+If you do not agree with these terms, DO NOT use this software.
+
+---
+
+THIRD-PARTY LICENSES:
+
+This software uses the Qt Framework, which is licensed under the 
+GNU Lesser General Public License (LGPL) version 3.
+
+For Qt licensing information, see: https://www.qt.io/licensing/
