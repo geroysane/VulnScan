@@ -1,48 +1,48 @@
 # VulnScan - Project State
 
 **Last Updated**: 2025-10-01
-**Current Phase**: FASE 1 - Foundation & Core Architecture
-**Completion**: 100% (COMPLETED ✅)
+**Current Phase**: FASE 2 - Network Scanner Core
+**Completion**: 0% (0/5 sessions completed)
 
 ---
 
 ## 📊 Current Status
 
 ### FASE 1: Foundation & Core Architecture ✅ (COMPLETED)
+**Progress**: 14/14 tasks completed (100%)
 
-**Overall Progress**: 14/14 tasks completed
+All foundational components implemented and tested.
 
-#### ✅ Completed Tasks
-- [x] Create complete directory structure
-- [x] Create root vulnscan.pro (SUBDIRS)
-- [x] Create common.pri
-- [x] Create src/core/core.pro
-- [x] Create src/gui/gui.pro
-- [x] Create src/cli/cli.pro
-- [x] Create tests/tests.pro
-- [x] Implement core interfaces (IScanner, IAIProvider, IRepository, IVulnerabilityChecker, IReportGenerator)
-- [x] Implement data models (ScanResult, Vulnerability, PortResult, ServiceInfo, AIAnalysis, ReportData)
-- [x] Create database schema (schema.sql)
-- [x] Implement DatabaseManager
-- [x] Implement Configuration system
-- [x] Implement Logger system
-- [x] Create initial unit tests
+### FASE 2: Network Scanner Core 🚧 (IN PROGRESS)
+**Progress**: 0/5 sessions completed (0%)
+
+**Current Session**: None (not started)
+
+#### Development Sessions
+- [ ] **Session 1**: Port Scanner Foundation (1-1.5h)
+- [ ] **Session 2**: Service Detection & Network Discovery (1-1.5h)
+- [ ] **Session 3**: Scan Engine Orchestrator (1h)
+- [ ] **Session 4**: Repository & CLI Application (1h)
+- [ ] **Session 5**: Integration Testing & Polish (1h)
+
+**Detailed session tracking**: See [docs/fasi/fase2-sessions.md](docs/fasi/fase2-sessions.md)
 
 #### 🚧 In Progress
-- None
+- None (waiting to start Session 1)
 
 #### ⏳ Pending Tasks
-- None
+- All FASE 2 tasks (see fase2-sessions.md)
 
 ---
 
 ## 📝 Notes
 
 ### Current Working On
-FASE 1 **COMPLETAMENTE FINITA** ✅✅✅
-- Compila con successo (CMake + MinGW 13.1.0)
-- Tutti i test passano (100%)
-- Pronto per FASE 2!
+**FASE 2 - Network Scanner Core** 🚧
+- Session-based development approach (5 sessions)
+- Current session: None (ready to start Session 1)
+- Estimated total time: 4-6 hours
+- See [fase2-sessions.md](docs/fasi/fase2-sessions.md) for details
 
 ### Blockers
 Nessuno! 🎉
@@ -52,7 +52,8 @@ Nessuno! 🎉
 2. ✅ ~~Fix unit test runtime issue~~ - **COMPLETED** (embedded schema)
 3. ✅ ~~Setup GitHub repository~~ - **COMPLETED**
 4. ✅ ~~Add project documentation (README, CONTRIBUTING, LICENSE)~~ - **COMPLETED**
-5. **START FASE 2: Network Scanner Core implementation**
+5. ✅ ~~Create FASE 2 session tracking~~ - **COMPLETED**
+6. **START FASE 2 Session 1: Port Scanner Foundation**
 
 ### Important Decisions Made
 - Build system: **CMake (primary)** + qmake (alternative, has compatibility issues)
@@ -131,7 +132,7 @@ Nessuno! 🎉
 To resume from this state in a new Claude session, use this command:
 
 ```
-Read project-state.md to understand the current development state. FASE 1 is complete, project is on GitHub (https://github.com/paolosereno/VulnScan), all documentation is ready. Start implementing FASE 2: Network Scanner Core.
+Read project-state.md and docs/fasi/fase2-sessions.md to understand the current development state. FASE 1 is complete. Ready to start FASE 2 Session 1: Port Scanner Foundation.
 ```
 
 Or to rebuild the project:
@@ -169,7 +170,8 @@ ctest --output-on-failure
 
 ## 📚 Quick References
 
-- **Current Phase Details**: [docs/fasi/fase1-foundation.md](docs/fasi/fase1-foundation.md)
+- **Current Phase Details**: [docs/fasi/fase2-network-scanner.md](docs/fasi/fase2-network-scanner.md)
+- **Current Session Tracking**: [docs/fasi/fase2-sessions.md](docs/fasi/fase2-sessions.md) ⭐
 - **All Phases Overview**: [docs/fasi/README.md](docs/fasi/README.md)
 - **Technical Requirements**: [docs/requirements.md](docs/requirements.md)
 - **Project Overview**: [prompt-main.md](prompt-main.md)
