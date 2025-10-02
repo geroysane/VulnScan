@@ -10,6 +10,7 @@
 #include "TestVulnerabilityDatabase.h"
 #include "TestVulnerabilityMatcher.h"
 #include "TestVulnerabilityScanner.h"
+#include "TestSslTlsChecker.h"
 #include "IntegrationTests.h"
 
 /**
@@ -84,6 +85,12 @@ int main(int argc, char *argv[]) {
     // Run VulnerabilityScanner tests
     {
         TestVulnerabilityScanner test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run SslTlsChecker tests
+    {
+        TestSslTlsChecker test;
         status |= QTest::qExec(&test, argc, argv);
     }
 
