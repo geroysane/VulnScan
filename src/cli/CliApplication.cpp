@@ -2,6 +2,7 @@
 #include <QCommandLineParser>
 #include <QTextStream>
 #include <QDir>
+#include <QTimer>
 #include <iostream>
 
 CliApplication::CliApplication(QObject *parent)
@@ -194,11 +195,13 @@ int CliApplication::performScan()
     config.enableServiceDetection = m_enableServiceDetection;
     config.enableDnsResolution = m_enableDnsResolution;
 
-    // Start scan
-    if (!m_scanEngine->startScan(config)) {
-        std::cerr << "Failed to start scan" << std::endl;
-        return 1;
-    }
+    // Start scan after event loop starts (using QTimer::singleShot)
+    QTimer::singleShot(0, this, [this, config]() {
+        if (!m_scanEngine->startScan(config)) {
+            std::cerr << "Failed to start scan" << std::endl;
+            m_app->exit(1);
+        }
+    });
 
     // Run event loop until scan completes
     return m_app->exec();
@@ -234,6 +237,7 @@ int CliApplication::listScans()
                   << std::endl;
     }
 
+    std::cout << std::endl;
     return 0;
 }
 
