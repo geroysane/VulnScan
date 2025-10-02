@@ -12,6 +12,8 @@ add_executable(vulnscan_tests
     TestDnsResolver.h
     TestNetworkInterface.cpp
     TestNetworkInterface.h
+    TestScanEngine.cpp
+    TestScanEngine.h
 )
 
 target_link_libraries(vulnscan_tests

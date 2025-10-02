@@ -5,6 +5,7 @@
 #include "TestServiceDetector.h"
 #include "TestDnsResolver.h"
 #include "TestNetworkInterface.h"
+#include "TestScanEngine.h"
 
 /**
  * @brief Main entry point for unit tests
@@ -48,6 +49,12 @@ int main(int argc, char *argv[]) {
     // Run NetworkInterface tests
     {
         TestNetworkInterface test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run ScanEngine tests
+    {
+        TestScanEngine test;
         status |= QTest::qExec(&test, argc, argv);
     }
 

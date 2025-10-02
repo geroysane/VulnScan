@@ -37,6 +37,10 @@ add_library(vulnscan_core STATIC
     scanner/DnsResolver.h
     scanner/NetworkInterface.cpp
     scanner/NetworkInterface.h
+    scanner/ScanConfiguration.cpp
+    scanner/ScanConfiguration.h
+    scanner/ScanEngine.cpp
+    scanner/ScanEngine.h
 )
 
 target_link_libraries(vulnscan_core
