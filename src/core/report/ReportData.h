@@ -5,9 +5,9 @@
 #include <QDateTime>
 #include <QList>
 #include <QMetaType>
-#include "scanner/ScanResult.h"
-#include "scanner/Vulnerability.h"
-#include "ai/AIAnalysis.h"
+#include "core/scanner/ScanResult.h"
+#include "core/scanner/Vulnerability.h"
+#include "core/ai/AIAnalysis.h"
 
 /**
  * @struct ReportData

@@ -12,6 +12,7 @@
 #include "TestVulnerabilityScanner.h"
 #include "TestSslTlsChecker.h"
 #include "TestServiceVulnChecker.h"
+#include "TestReportGenerator.h"
 #include "IntegrationTests.h"
 
 /**
@@ -98,6 +99,12 @@ int main(int argc, char *argv[]) {
     // Run ServiceVulnChecker tests
     {
         TestServiceVulnChecker test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run ReportGenerator tests
+    {
+        TestReportGenerator test;
         status |= QTest::qExec(&test, argc, argv);
     }
 

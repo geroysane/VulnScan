@@ -63,6 +63,14 @@ add_library(vulnscan_core STATIC
     vulnerability/SshVulnChecker.h
     vulnerability/FtpVulnChecker.cpp
     vulnerability/FtpVulnChecker.h
+    vulnerability/CveSeeder.cpp
+    vulnerability/CveSeeder.h
+
+    # Report Generation
+    report/JsonReportGenerator.cpp
+    report/JsonReportGenerator.h
+    report/CsvReportGenerator.cpp
+    report/CsvReportGenerator.h
 )
 
 target_link_libraries(vulnscan_core
