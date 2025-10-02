@@ -1,7 +1,7 @@
 #include "Logger.h"
 #include <QDateTime>
 #include <QMutexLocker>
-#include <iostream>
+#include <cstdio>
 
 // Static member initialization
 QFile* Logger::s_logFile = nullptr;
@@ -22,7 +22,7 @@ void Logger::initialize(const QString& logFilePath, bool enableConsole) {
         s_logStream = new QTextStream(s_logFile);
         s_logStream->setEncoding(QStringConverter::Utf8);
     } else {
-        std::cerr << "Failed to open log file: " << logFilePath.toStdString() << std::endl;
+        fprintf(stderr, "Failed to open log file: %s\n", logFilePath.toUtf8().constData());
         delete s_logFile;
         s_logFile = nullptr;
     }
@@ -51,12 +51,14 @@ void Logger::log(Level level, const QString& message) {
         s_logStream->flush();
     }
 
-    // Write to console
+    // Write to console (use fprintf to avoid triggering Qt's message handler)
     if (s_enableConsole) {
         if (level >= Level::Error) {
-            std::cerr << logLine.toStdString() << std::endl;
+            fprintf(stderr, "%s\n", logLine.toUtf8().constData());
+            fflush(stderr);
         } else {
-            std::cout << logLine.toStdString() << std::endl;
+            fprintf(stdout, "%s\n", logLine.toUtf8().constData());
+            fflush(stdout);
         }
     }
 }

@@ -1,6 +1,5 @@
 #include <QApplication>
 #include "MainWindow.h"
-#include "core/common/Logger.h"
 #include "core/config/Configuration.h"
 
 /**
@@ -14,9 +13,8 @@ int main(int argc, char *argv[]) {
     QCoreApplication::setApplicationName("VulnScan GUI");
     QCoreApplication::setApplicationVersion("0.1.0");
 
-    // Initialize logger
-    Logger::initialize("vulnscan_gui.log", true);
-    Logger::info("VulnScan GUI starting...");
+    // Note: Logger disabled for GUI due to qInstallMessageHandler issues
+    // Will be reimplemented in FASE 3 with GUI-safe logging
 
     // Load configuration
     Configuration& config = Configuration::instance();
@@ -26,13 +24,5 @@ int main(int argc, char *argv[]) {
     MainWindow window;
     window.show();
 
-    Logger::info("VulnScan GUI started successfully");
-
-    int result = app.exec();
-
-    // Cleanup
-    Logger::info("VulnScan GUI shutting down...");
-    Logger::shutdown();
-
-    return result;
+    return app.exec();
 }

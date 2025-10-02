@@ -1,4 +1,4 @@
-add_executable(vulnscan_gui
+add_executable(vulnscan_gui WIN32
     main.cpp
     MainWindow.cpp
     MainWindow.h

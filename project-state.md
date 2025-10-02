@@ -78,6 +78,12 @@ Nessuno! 🎉
 - License: MIT with legal disclaimer
 - Repository: https://github.com/paolosereno/VulnScan
 
+### Files Modified (Logger Fix)
+**Logger Improvements:**
+- src/core/common/Logger.cpp - Changed console output from std::cout/cerr to fprintf/fflush to avoid Qt message handler recursion
+- src/gui/CMakeLists.txt - Added WIN32 flag for GUI application
+- src/gui/main.cpp - Disabled Logger initialization in GUI (causes deadlock with qInstallMessageHandler + WIN32)
+
 ### Files Created in Session 5 (Integration Testing & Polish)
 **Integration Tests:**
 - tests/IntegrationTests.h/cpp (24 integration test cases, optional execution)
@@ -158,7 +164,7 @@ Nessuno! 🎉
 
 **Build Artifacts (created during compilation):**
 - build/src/core/libvulnscan_core.a (static library)
-- build/src/gui/vulnscan_gui.exe ✅ (GUI application)
+- build/src/gui/vulnscan_gui.exe ✅ (GUI application - WIN32 flag)
 - build/src/cli/vulnscan_cli.exe ✅ (CLI application)
 - build/tests/vulnscan_tests.exe ✅ (Unit tests - 100% pass)
 
@@ -276,7 +282,7 @@ ctest --output-on-failure
 - ~~**Unit tests fail at runtime**~~ - **FIXED**: Schema is now embedded directly in DatabaseManager code ✅
 - **qmake incompatibility**: Qt 6.9.1 mingw_64 has issues with qmake detecting compiler macros. Resolved by using CMake as primary build system
 - Configuration setNestedValue has potential type safety issues with pointer casting
-- Logger requires proper testing on Windows for path handling
+- **Logger GUI incompatibility**: Logger disabled in GUI application (src/gui/main.cpp) due to qInstallMessageHandler causing deadlock with WIN32 flag. Logger modified to use fprintf/fflush instead of std::cout/cerr (src/core/common/Logger.cpp:54-63) to avoid Qt message handler recursion in CLI. **TODO for FASE 3: Reimplement GUI logging with separate logger without qInstallMessageHandler**
 - Schema defined in two places (schema.sql and DatabaseManager.cpp) - must keep synchronized
 - Integration tests may timeout if too many real scans are executed - made optional with --integration flag
 
@@ -289,8 +295,10 @@ ctest --output-on-failure
 - ✅ ~~Fix unit test runtime issue~~ - **DONE**: Schema embedded in code
 - ✅ ~~Add integration tests~~ - **DONE**: 24 integration tests created (optional execution)
 - ✅ ~~Thread safety verification~~ - **DONE**: Verified through integration tests
+- ✅ ~~Fix Logger console output for Qt applications~~ - **DONE**: Using fprintf instead of std::cout
 
 ### Future Enhancements
+- **FASE 3**: Implement GUI-safe logging (separate logger without qInstallMessageHandler)
 - Evaluate vcpkg for dependency management on Windows
 - Auto-generate DatabaseManager schema code from schema.sql file
 - Implement signal/slot mechanism for real-time configuration changes
