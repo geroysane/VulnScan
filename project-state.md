@@ -54,6 +54,8 @@ All foundational components implemented and tested.
   - Test suite: ✅ Core tests passing (CRUD, queries, initialization)
   - Fixed: SQL keyword conflict ("references" → "refs")
   - Fixed: Database file existence check for connection pooling
+  - Fixed: **CRITICAL DEADLOCK** - Recursive mutex lock in `findByServiceAndVersion()`
+  - Fixed: **CRITICAL BUG** - Connection pool instance isolation (destructor cross-contamination)
   - Note: Concurrent tests temporarily skipped (timeout issues)
   - Ready for: Session 2 - Vulnerability Matcher & Scanner Core
 
