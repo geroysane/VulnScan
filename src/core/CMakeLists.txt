@@ -13,6 +13,8 @@ add_library(vulnscan_core STATIC
     # Common
     common/Logger.cpp
     common/Logger.h
+    common/GuiLogger.cpp
+    common/GuiLogger.h
 
     # Interfaces
     scanner/IScanner.h

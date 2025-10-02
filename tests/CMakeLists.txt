@@ -30,6 +30,8 @@ add_executable(vulnscan_tests
     TestServiceVulnChecker.h
     TestReportGenerator.cpp
     TestReportGenerator.h
+    IntegrationTestsVuln.cpp
+    IntegrationTestsVuln.h
 )
 
 target_link_libraries(vulnscan_tests

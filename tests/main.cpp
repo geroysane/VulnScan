@@ -14,6 +14,7 @@
 #include "TestServiceVulnChecker.h"
 #include "TestReportGenerator.h"
 #include "IntegrationTests.h"
+#include "IntegrationTestsVuln.h"
 
 /**
  * @brief Main entry point for unit tests
@@ -120,6 +121,9 @@ int main(int argc, char *argv[]) {
     if (runIntegration) {
         IntegrationTests test;
         status |= QTest::qExec(&test, argc, argv);
+
+        IntegrationTestsVuln vulnTest;
+        status |= QTest::qExec(&vulnTest, argc, argv);
     }
 
     return status;
