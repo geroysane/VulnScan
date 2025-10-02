@@ -1,8 +1,8 @@
 # VulnScan - Project State
 
-**Last Updated**: 2025-10-01
+**Last Updated**: 2025-10-02
 **Current Phase**: FASE 2 - Network Scanner Core
-**Completion**: 0% (0/5 sessions completed)
+**Completion**: 40% (2/5 sessions completed)
 
 ---
 
@@ -14,24 +14,29 @@
 All foundational components implemented and tested.
 
 ### FASE 2: Network Scanner Core 🚧 (IN PROGRESS)
-**Progress**: 0/5 sessions completed (0%)
+**Progress**: 2/5 sessions completed (40%)
 
-**Current Session**: None (not started)
+**Current Session**: Session 2 completed ✅ - Ready for Session 3
 
 #### Development Sessions
-- [ ] **Session 1**: Port Scanner Foundation (1-1.5h)
-- [ ] **Session 2**: Service Detection & Network Discovery (1-1.5h)
+- [x] **Session 1**: Port Scanner Foundation (~45min) ✅
+- [x] **Session 2**: Service Detection & Network Discovery (~1h) ✅
 - [ ] **Session 3**: Scan Engine Orchestrator (1h)
 - [ ] **Session 4**: Repository & CLI Application (1h)
 - [ ] **Session 5**: Integration Testing & Polish (1h)
 
 **Detailed session tracking**: See [docs/fasi/fase2-sessions.md](docs/fasi/fase2-sessions.md)
 
-#### 🚧 In Progress
-- None (waiting to start Session 1)
+#### ✅ Just Completed
+- **Session 2: Service Detection & Network Discovery**
+  - ServiceDetector class with banner grabbing (HTTP, SSH, FTP, SMTP, POP3, IMAP, MySQL, etc.)
+  - DnsResolver class (sync/async DNS resolution, reverse lookup)
+  - NetworkInterface class (host discovery, CIDR expansion, interface enumeration)
+  - Comprehensive unit tests (57 test cases total, 100% pass)
+  - All components fully functional
 
-#### ⏳ Pending Tasks
-- All FASE 2 tasks (see fase2-sessions.md)
+#### ⏳ Next Up
+- **Session 3**: Scan Engine Orchestrator (ScanEngine, scan workflow coordination)
 
 ---
 
@@ -40,8 +45,10 @@ All foundational components implemented and tested.
 ### Current Working On
 **FASE 2 - Network Scanner Core** 🚧
 - Session-based development approach (5 sessions)
-- Current session: None (ready to start Session 1)
-- Estimated total time: 4-6 hours
+- Current session: Session 2 completed ✅
+- Progress: 2/5 sessions (40%)
+- Time spent: ~1h 45min
+- Estimated remaining: 2.5-3.5 hours
 - See [fase2-sessions.md](docs/fasi/fase2-sessions.md) for details
 
 ### Blockers
@@ -53,7 +60,9 @@ Nessuno! 🎉
 3. ✅ ~~Setup GitHub repository~~ - **COMPLETED**
 4. ✅ ~~Add project documentation (README, CONTRIBUTING, LICENSE)~~ - **COMPLETED**
 5. ✅ ~~Create FASE 2 session tracking~~ - **COMPLETED**
-6. **START FASE 2 Session 1: Port Scanner Foundation**
+6. ✅ ~~FASE 2 Session 1: Port Scanner Foundation~~ - **COMPLETED**
+7. ✅ ~~FASE 2 Session 2: Service Detection & Network Discovery~~ - **COMPLETED**
+8. **START FASE 2 Session 3: Scan Engine Orchestrator**
 
 ### Important Decisions Made
 - Build system: **CMake (primary)** + qmake (alternative, has compatibility issues)
@@ -64,7 +73,22 @@ Nessuno! 🎉
 - License: MIT with legal disclaimer
 - Repository: https://github.com/paolosereno/VulnScan
 
-### Files Created in Last Session
+### Files Created in Session 2 (Service Detection & Network Discovery)
+**Scanner Implementation:**
+- src/core/scanner/ServiceDetector.h/cpp (banner grabbing, service fingerprinting)
+- src/core/scanner/DnsResolver.h/cpp (DNS resolution, reverse lookup)
+- src/core/scanner/NetworkInterface.h/cpp (host discovery, CIDR expansion)
+- tests/TestServiceDetector.h/cpp (18 test cases, 100% pass)
+- tests/TestDnsResolver.h/cpp (20 test cases, 100% pass)
+- tests/TestNetworkInterface.h/cpp (19 test cases, 100% pass)
+
+### Files Created in Session 1 (Port Scanner Foundation)
+**Scanner Implementation:**
+- src/core/scanner/PortScanner.h/cpp (multi-threaded TCP scanner)
+- src/core/scanner/ScanWorker.h/cpp (thread-safe worker)
+- tests/TestPortScanner.h/cpp (24 test cases, 100% pass)
+
+### Files Created in FASE 1
 **Build System:**
 - vulnscan.pro (root project file - qmake)
 - common.pri (shared configuration - qmake)
@@ -132,7 +156,7 @@ Nessuno! 🎉
 To resume from this state in a new Claude session, use this command:
 
 ```
-Read project-state.md and docs/fasi/fase2-sessions.md to understand the current development state. FASE 1 is complete. Ready to start FASE 2 Session 1: Port Scanner Foundation.
+Read project-state.md and docs/fasi/fase2-sessions.md to understand the current development state. FASE 1 is complete. FASE 2 Sessions 1-2 completed. Ready to start FASE 2 Session 3: Scan Engine Orchestrator.
 ```
 
 Or to rebuild the project:
@@ -165,6 +189,10 @@ ctest --output-on-failure
 **Test Results**: ✅ 100% tests passed (0 failed)
 - TestDatabaseManager: All tests pass
 - TestConfiguration: All tests pass
+- TestPortScanner: All tests pass (24 tests)
+- TestServiceDetector: All tests pass (18 tests)
+- TestDnsResolver: All tests pass (20 tests)
+- TestNetworkInterface: All tests pass (19 tests)
 
 ---
 

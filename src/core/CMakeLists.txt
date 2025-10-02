@@ -25,6 +25,18 @@ add_library(vulnscan_core STATIC
     scanner/Vulnerability.h
     ai/AIAnalysis.h
     report/ReportData.h
+
+    # Scanner Implementation
+    scanner/PortScanner.cpp
+    scanner/PortScanner.h
+    scanner/ScanWorker.cpp
+    scanner/ScanWorker.h
+    scanner/ServiceDetector.cpp
+    scanner/ServiceDetector.h
+    scanner/DnsResolver.cpp
+    scanner/DnsResolver.h
+    scanner/NetworkInterface.cpp
+    scanner/NetworkInterface.h
 )
 
 target_link_libraries(vulnscan_core

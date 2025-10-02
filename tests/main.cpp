@@ -1,6 +1,10 @@
 #include <QtTest>
 #include "TestDatabaseManager.h"
 #include "TestConfiguration.h"
+#include "TestPortScanner.h"
+#include "TestServiceDetector.h"
+#include "TestDnsResolver.h"
+#include "TestNetworkInterface.h"
 
 /**
  * @brief Main entry point for unit tests
@@ -20,6 +24,30 @@ int main(int argc, char *argv[]) {
     // Run Configuration tests
     {
         TestConfiguration test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run PortScanner tests
+    {
+        TestPortScanner test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run ServiceDetector tests
+    {
+        TestServiceDetector test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run DnsResolver tests
+    {
+        TestDnsResolver test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run NetworkInterface tests
+    {
+        TestNetworkInterface test;
         status |= QTest::qExec(&test, argc, argv);
     }
 

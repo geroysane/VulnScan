@@ -4,6 +4,14 @@ add_executable(vulnscan_tests
     TestDatabaseManager.h
     TestConfiguration.cpp
     TestConfiguration.h
+    TestPortScanner.cpp
+    TestPortScanner.h
+    TestServiceDetector.cpp
+    TestServiceDetector.h
+    TestDnsResolver.cpp
+    TestDnsResolver.h
+    TestNetworkInterface.cpp
+    TestNetworkInterface.h
 )
 
 target_link_libraries(vulnscan_tests
