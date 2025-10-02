@@ -10,7 +10,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 # Find Qt6
-find_package(Qt6 REQUIRED COMPONENTS Core Network Sql Widgets Test)
+find_package(Qt6 REQUIRED COMPONENTS Core Network Sql Widgets Test Concurrent)
 
 # Enable testing
 enable_testing()

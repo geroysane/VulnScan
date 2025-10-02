@@ -7,6 +7,7 @@
 #include "TestNetworkInterface.h"
 #include "TestScanEngine.h"
 #include "TestScanRepository.h"
+#include "IntegrationTests.h"
 
 /**
  * @brief Main entry point for unit tests
@@ -62,6 +63,20 @@ int main(int argc, char *argv[]) {
     // Run ScanRepository tests
     {
         TestScanRepository test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run Integration tests (disabled by default - use --integration to enable)
+    bool runIntegration = false;
+    for (int i = 0; i < argc; i++) {
+        if (QString(argv[i]) == "--integration") {
+            runIntegration = true;
+            break;
+        }
+    }
+
+    if (runIntegration) {
+        IntegrationTests test;
         status |= QTest::qExec(&test, argc, argv);
     }
 

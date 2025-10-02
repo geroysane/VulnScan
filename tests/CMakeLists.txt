@@ -16,12 +16,15 @@ add_executable(vulnscan_tests
     TestScanEngine.h
     TestScanRepository.cpp
     TestScanRepository.h
+    IntegrationTests.cpp
+    IntegrationTests.h
 )
 
 target_link_libraries(vulnscan_tests
     PRIVATE
         vulnscan_core
         Qt6::Test
+        Qt6::Concurrent
 )
 
 # Add test to CTest
