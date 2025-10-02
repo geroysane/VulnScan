@@ -3,6 +3,8 @@ add_library(vulnscan_core STATIC
     database/DatabaseManager.cpp
     database/DatabaseManager.h
     database/IRepository.h
+    database/ScanRepository.cpp
+    database/ScanRepository.h
 
     # Config
     config/Configuration.cpp

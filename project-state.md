@@ -2,7 +2,7 @@
 
 **Last Updated**: 2025-10-02
 **Current Phase**: FASE 2 - Network Scanner Core
-**Completion**: 60% (3/5 sessions completed)
+**Completion**: 80% (4/5 sessions completed)
 
 ---
 
@@ -14,29 +14,29 @@
 All foundational components implemented and tested.
 
 ### FASE 2: Network Scanner Core 🚧 (IN PROGRESS)
-**Progress**: 3/5 sessions completed (60%)
+**Progress**: 4/5 sessions completed (80%)
 
-**Current Session**: Session 3 completed ✅ - Ready for Session 4
+**Current Session**: Session 4 completed ✅ - Ready for Session 5
 
 #### Development Sessions
 - [x] **Session 1**: Port Scanner Foundation (~45min) ✅
 - [x] **Session 2**: Service Detection & Network Discovery (~1h) ✅
 - [x] **Session 3**: Scan Engine Orchestrator (~1h) ✅
-- [ ] **Session 4**: Repository & CLI Application (1h)
+- [x] **Session 4**: Repository & CLI Application (~1h) ✅
 - [ ] **Session 5**: Integration Testing & Polish (1h)
 
 **Detailed session tracking**: See [docs/fasi/fase2-sessions.md](docs/fasi/fase2-sessions.md)
 
 #### ✅ Just Completed
-- **Session 3: Scan Engine Orchestrator**
-  - ScanConfiguration class with preset configurations (quick/full/custom scan)
-  - ScanEngine class orchestrating complete scan workflows
-  - Integration of PortScanner, ServiceDetector, DnsResolver, NetworkInterface
-  - Progress tracking, cancellation support, error handling
-  - Comprehensive unit tests (22 test cases, 100% pass - total 103 tests)
+- **Session 4: Repository & CLI Application**
+  - ScanRepository class for database persistence (CRUD operations)
+  - CliApplication class with full CLI functionality
+  - Commands: scan, list, show, delete, clean
+  - Database integration with scan history and port results
+  - Comprehensive unit tests (20 test cases, 100% pass - total 123+ tests)
 
 #### ⏳ Next Up
-- **Session 4**: Repository & CLI Application (ScanRepository, CLI integration)
+- **Session 5**: Integration Testing & Polish (final testing, bug fixes, documentation)
 
 ---
 
@@ -45,10 +45,10 @@ All foundational components implemented and tested.
 ### Current Working On
 **FASE 2 - Network Scanner Core** 🚧
 - Session-based development approach (5 sessions)
-- Current session: Session 3 completed ✅
-- Progress: 3/5 sessions (60%)
-- Time spent: ~2h 45min
-- Estimated remaining: 1.5-2.5 hours
+- Current session: Session 4 completed ✅
+- Progress: 4/5 sessions (80%)
+- Time spent: ~3h 45min
+- Estimated remaining: 0.5-1.5 hours
 - See [fase2-sessions.md](docs/fasi/fase2-sessions.md) for details
 
 ### Blockers
@@ -63,7 +63,8 @@ Nessuno! 🎉
 6. ✅ ~~FASE 2 Session 1: Port Scanner Foundation~~ - **COMPLETED**
 7. ✅ ~~FASE 2 Session 2: Service Detection & Network Discovery~~ - **COMPLETED**
 8. ✅ ~~FASE 2 Session 3: Scan Engine Orchestrator~~ - **COMPLETED**
-9. **START FASE 2 Session 4: Repository & CLI Application**
+9. ✅ ~~FASE 2 Session 4: Repository & CLI Application~~ - **COMPLETED**
+10. **START FASE 2 Session 5: Integration Testing & Polish**
 
 ### Important Decisions Made
 - Build system: **CMake (primary)** + qmake (alternative, has compatibility issues)
@@ -73,6 +74,12 @@ Nessuno! 🎉
 - GUI Framework: Qt 6.9.1
 - License: MIT with legal disclaimer
 - Repository: https://github.com/paolosereno/VulnScan
+
+### Files Created in Session 4 (Repository & CLI Application)
+**Database & CLI Implementation:**
+- src/core/database/ScanRepository.h/cpp (scan persistence with CRUD operations)
+- src/cli/CliApplication.h/cpp (full CLI with scan/list/show/delete/clean commands)
+- tests/TestScanRepository.h/cpp (20 test cases, 100% pass)
 
 ### Files Created in Session 3 (Scan Engine Orchestrator)
 **Scanner Implementation:**
@@ -163,7 +170,7 @@ Nessuno! 🎉
 To resume from this state in a new Claude session, use this command:
 
 ```
-Read project-state.md and docs/fasi/fase2-sessions.md to understand the current development state. FASE 1 is complete. FASE 2 Sessions 1-3 completed. Ready to start FASE 2 Session 4: Repository & CLI Application.
+Read project-state.md and docs/fasi/fase2-sessions.md to understand the current development state. FASE 1 is complete. FASE 2 Sessions 1-4 completed. Ready to start FASE 2 Session 5: Integration Testing & Polish.
 ```
 
 Or to rebuild the project:
@@ -201,7 +208,8 @@ ctest --output-on-failure
 - TestDnsResolver: All tests pass (20 tests)
 - TestNetworkInterface: All tests pass (19 tests)
 - TestScanEngine: All tests pass (22 tests)
-**Total**: 103+ unit tests
+- TestScanRepository: All tests pass (20 tests)
+**Total**: 123+ unit tests
 
 ---
 

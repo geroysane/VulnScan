@@ -14,6 +14,8 @@ add_executable(vulnscan_tests
     TestNetworkInterface.h
     TestScanEngine.cpp
     TestScanEngine.h
+    TestScanRepository.cpp
+    TestScanRepository.h
 )
 
 target_link_libraries(vulnscan_tests
