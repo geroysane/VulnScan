@@ -7,6 +7,7 @@
 #include "TestNetworkInterface.h"
 #include "TestScanEngine.h"
 #include "TestScanRepository.h"
+#include "TestVulnerabilityDatabase.h"
 #include "IntegrationTests.h"
 
 /**
@@ -63,6 +64,12 @@ int main(int argc, char *argv[]) {
     // Run ScanRepository tests
     {
         TestScanRepository test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run VulnerabilityDatabase tests
+    {
+        TestVulnerabilityDatabase test;
         status |= QTest::qExec(&test, argc, argv);
     }
 
