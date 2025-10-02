@@ -239,6 +239,26 @@ Nessuno! 🎉 (Sessions 1-2 completate)
 
 ---
 
+## 🛠️ Build Configuration
+
+**Parallel Build Jobs**: Use `-j12` for compilation (system has 20 processors available)
+
+**CMake Build Command:**
+```bash
+export PATH="/c/Qt/Tools/mingw1310_64/bin:/c/Qt/6.9.1/mingw_64/bin:$PATH"
+cd build
+cmake --build . -j12
+```
+
+**Windows Build Script:**
+```bash
+build.bat   # Configured to use -j12 with mingw32-make
+```
+
+**Note**: Always use `-j12` for faster compilation times when building with MinGW.
+
+---
+
 ## 🔄 How to Resume Development
 
 To resume from this state in a new Claude session, use this command:

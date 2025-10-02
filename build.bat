@@ -54,7 +54,7 @@ echo.
 
 REM Run make
 echo Running mingw32-make...
-mingw32-make -j4
+mingw32-make -j12
 if %ERRORLEVEL% NEQ 0 (
     echo ERROR: Build failed
     cd ..
