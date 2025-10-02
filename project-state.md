@@ -1,8 +1,8 @@
 # VulnScan - Project State
 
 **Last Updated**: 2025-10-03
-**Current Phase**: FASE 3 - Vulnerability Assessment ✅ (COMPLETED)
-**Completion**: 100% (All 6 sessions COMPLETED ✅)
+**Current Phase**: FASE 4 - AI Integration 🤖 (READY TO START)
+**Completion**: 0/5 sessions (Planning complete)
 
 ---
 
@@ -75,6 +75,42 @@ All foundational components implemented and tested.
 
 **Detailed session tracking**: See [docs/fasi/fase3-sessions.md](docs/fasi/fase3-sessions.md)
 
+### FASE 4: AI Integration 🤖 (READY TO START)
+**Progress**: 0/5 sessions completed (0%)
+
+**Status**: Planning complete - Ready to start Session 1
+
+#### Development Sessions
+- [ ] **Session 1**: AI Provider Foundation (~2h)
+  - GenericProvider with custom endpoints
+  - Custom headers support
+  - API format selector (OpenAI/Anthropic compatible)
+  - Connection testing
+  - Provider presets (OpenRouter, Groq, Ollama)
+- [ ] **Session 2**: Official AI Providers (~2h)
+  - ClaudeProvider (Anthropic API)
+  - OpenAIProvider (OpenAI API)
+  - GeminiProvider (Google API)
+  - Secure API key management (environment variables)
+- [ ] **Session 3**: Async Workers & Rate Limiting (~1.5h)
+  - AIWorker for non-blocking API calls
+  - Thread-safe rate limiting
+  - Timeout management
+  - Request queuing
+- [ ] **Session 4**: AI Analyzer & Fallback (~1.5h)
+  - AIAnalyzer orchestration layer
+  - Concurrent provider calls
+  - Automatic fallback mechanism
+  - Provider priority system
+- [ ] **Session 5**: Prompt Builder & Integration (~1.5h)
+  - PromptBuilder for prompt generation
+  - Vulnerability analysis templates
+  - Integration with VulnerabilityScanner
+  - Configuration support for AI settings
+  - End-to-end integration tests
+
+**Detailed session tracking**: See [docs/fasi/fase4-sessions.md](docs/fasi/fase4-sessions.md)
+
 #### ✅ Recently Completed
 - **Test Execution Fix & Documentation** (Completed 2025-10-03)
   - Investigation: ✅ Identified root cause of test hanging (Qt event loop + async operations)
@@ -115,22 +151,21 @@ All foundational components implemented and tested.
 ## 📝 Notes
 
 ### Current Working On
-**FASE 3 - Vulnerability Assessment** ✅ **COMPLETED**
-- Session-based development approach (6 sessions)
-- **Session 1: Vulnerability Database Foundation** - ✅ **COMPLETED**
-- **Session 2: Vulnerability Matcher & Scanner Core** - ✅ **COMPLETED**
-- **Session 3: SSL/TLS Security Checker** - ✅ **COMPLETED**
-- **Session 4: Service-Specific Vulnerability Checks** - ✅ **COMPLETED**
-- **Session 5: Report Generation & CVE Database Seeding** - ✅ **COMPLETED**
-- **Session 6: Integration Testing & GUI Logger Fix** - ✅ **COMPLETED**
-- Progress: 6/6 sessions completed (100%) ✅
-- Time spent: ~7.5h (all sessions complete)
-- **FASE 3 COMPLETE** - Ready for FASE 4 (AI Integration)
-- See [fase3-sessions.md](docs/fasi/fase3-sessions.md) for details
-- Previous phase: **FASE 2** completed successfully (5/5 sessions, ~4h 45min)
+**FASE 4 - AI Integration** 🤖 **READY TO START**
+- Session-based development approach (5 sessions)
+- **Session 1: AI Provider Foundation** - ⏳ **READY TO START**
+- **Session 2: Official AI Providers** - ⏳ Pending
+- **Session 3: Async Workers & Rate Limiting** - ⏳ Pending
+- **Session 4: AI Analyzer & Fallback** - ⏳ Pending
+- **Session 5: Prompt Builder & Integration** - ⏳ Pending
+- Progress: 0/5 sessions completed (0%)
+- Time spent: 0h (planning complete)
+- Estimated total time: ~8.5h
+- See [fase4-sessions.md](docs/fasi/fase4-sessions.md) for details
+- Previous phase: **FASE 3** completed successfully (6/6 sessions, ~7.5h)
 
 ### Blockers
-Nessuno! 🎉 (FASE 3 completata - tutte le 6 sessioni)
+Nessuno! 🎉 (Pianificazione FASE 4 completata - pronto per iniziare)
 
 ### Next Steps
 1. ✅ ~~Test project compilation~~ - **COMPLETED**
@@ -151,7 +186,9 @@ Nessuno! 🎉 (FASE 3 completata - tutte le 6 sessioni)
 16. ✅ ~~FASE 3 Session 4: Service-Specific Vulnerability Checks~~ - **COMPLETED** (22 tests + HTTP/SSH/FTP checkers)
 17. ✅ ~~FASE 3 Session 5: Report Generation & CVE Database Seeding~~ - **COMPLETED** (16 tests + JSON/CSV export + CVE seeding)
 18. ✅ ~~FASE 3 Session 6: Integration Testing & GUI Logger Fix~~ - **COMPLETED** (8 integration tests + GuiLogger)
-19. **FASE 4: AI Integration** - Ready to start
+19. ✅ ~~Test execution investigation and documentation~~ - **COMPLETED** (docs/TESTING.md + processEvents() fix)
+20. ✅ ~~Create FASE 4 session tracking~~ - **COMPLETED** (5 sessions planned)
+21. **FASE 4 Session 1: AI Provider Foundation** - Ready to start
 
 ### Important Decisions Made
 - Build system: **CMake (primary)** + qmake (alternative, has compatibility issues)
@@ -373,7 +410,7 @@ build.bat   # Configured to use -j12 with mingw32-make
 To resume from this state in a new Claude session, use this command:
 
 ```
-Read project-state.md to understand the current development state. FASE 1 complete (14/14). FASE 2 complete (5/5 sessions). FASE 3 complete (6/6 sessions). Ready to start FASE 4: AI Integration.
+Read project-state.md and docs/fasi/fase4-sessions.md to understand the current development state. FASE 1 complete (14/14). FASE 2 complete (5/5 sessions). FASE 3 complete (6/6 sessions). FASE 4 in progress (0/5 sessions). Ready to start FASE 4 Session 1: AI Provider Foundation.
 ```
 
 Or to rebuild the project:
