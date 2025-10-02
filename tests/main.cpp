@@ -20,6 +20,11 @@
  * @brief Main entry point for unit tests
  *
  * This function runs all registered test classes.
+ *
+ * NOTE: QCoreApplication is created but we ensure proper cleanup by:
+ * - Using scoped blocks for each test class
+ * - Forcing QCoreApplication::processEvents() after each test
+ * - NOT calling app.exec() (tests don't need event loop)
  */
 int main(int argc, char *argv[]) {
     QCoreApplication app(argc, argv);
@@ -30,18 +35,21 @@ int main(int argc, char *argv[]) {
         TestDatabaseManager test;
         status |= QTest::qExec(&test, argc, argv);
     }
+    QCoreApplication::processEvents();
 
     // Run Configuration tests
     {
         TestConfiguration test;
         status |= QTest::qExec(&test, argc, argv);
     }
+    QCoreApplication::processEvents();
 
     // Run PortScanner tests
     {
         TestPortScanner test;
         status |= QTest::qExec(&test, argc, argv);
     }
+    QCoreApplication::processEvents();
 
     // Run ServiceDetector tests
     {
