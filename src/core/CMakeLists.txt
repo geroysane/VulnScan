@@ -47,6 +47,12 @@ add_library(vulnscan_core STATIC
     # Vulnerability Assessment
     vulnerability/VulnerabilityDatabase.cpp
     vulnerability/VulnerabilityDatabase.h
+    vulnerability/VulnerabilityMatcher.cpp
+    vulnerability/VulnerabilityMatcher.h
+    vulnerability/VulnerabilityScanner.cpp
+    vulnerability/VulnerabilityScanner.h
+    vulnerability/VulnerabilityWorker.cpp
+    vulnerability/VulnerabilityWorker.h
 )
 
 target_link_libraries(vulnscan_core

@@ -8,6 +8,8 @@
 #include "TestScanEngine.h"
 #include "TestScanRepository.h"
 #include "TestVulnerabilityDatabase.h"
+#include "TestVulnerabilityMatcher.h"
+#include "TestVulnerabilityScanner.h"
 #include "IntegrationTests.h"
 
 /**
@@ -70,6 +72,18 @@ int main(int argc, char *argv[]) {
     // Run VulnerabilityDatabase tests
     {
         TestVulnerabilityDatabase test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run VulnerabilityMatcher tests
+    {
+        TestVulnerabilityMatcher test;
+        status |= QTest::qExec(&test, argc, argv);
+    }
+
+    // Run VulnerabilityScanner tests
+    {
+        TestVulnerabilityScanner test;
         status |= QTest::qExec(&test, argc, argv);
     }
 

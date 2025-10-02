@@ -20,6 +20,10 @@ add_executable(vulnscan_tests
     IntegrationTests.h
     TestVulnerabilityDatabase.cpp
     TestVulnerabilityDatabase.h
+    TestVulnerabilityMatcher.cpp
+    TestVulnerabilityMatcher.h
+    TestVulnerabilityScanner.cpp
+    TestVulnerabilityScanner.h
 )
 
 target_link_libraries(vulnscan_tests
