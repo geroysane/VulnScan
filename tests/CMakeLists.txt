@@ -26,6 +26,8 @@ add_executable(vulnscan_tests
     TestVulnerabilityScanner.h
     TestSslTlsChecker.cpp
     TestSslTlsChecker.h
+    TestServiceVulnChecker.cpp
+    TestServiceVulnChecker.h
 )
 
 target_link_libraries(vulnscan_tests

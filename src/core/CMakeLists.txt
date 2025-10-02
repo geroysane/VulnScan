@@ -55,6 +55,14 @@ add_library(vulnscan_core STATIC
     vulnerability/VulnerabilityWorker.h
     vulnerability/SslTlsChecker.cpp
     vulnerability/SslTlsChecker.h
+    vulnerability/ServiceVulnChecker.cpp
+    vulnerability/ServiceVulnChecker.h
+    vulnerability/HttpVulnChecker.cpp
+    vulnerability/HttpVulnChecker.h
+    vulnerability/SshVulnChecker.cpp
+    vulnerability/SshVulnChecker.h
+    vulnerability/FtpVulnChecker.cpp
+    vulnerability/FtpVulnChecker.h
 )
 
 target_link_libraries(vulnscan_core
